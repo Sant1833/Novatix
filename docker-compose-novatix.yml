@@ -1,0 +1,62 @@
+version: "3.8"
+
+services:
+  apuestas:
+    image: santgar/novatix-apuestas:1.0
+    ports:
+      - "3000:3000"
+    environment:
+      DB_HOST: 192.168.100.5
+      DB_USER: novatix_user
+      DB_PASSWORD: Novatix2026*
+      DB_NAME: apuestas_db
+    deploy:
+      replicas: 2
+
+  usuarios:
+    image: santgar/novatix-usuarios:1.0
+    ports:
+      - "3001:3001"
+    environment:
+      DB_HOST: 192.168.100.5
+      DB_USER: novatix_user
+      DB_PASSWORD: Novatix2026*
+      DB_NAME: usuarios_db
+    deploy:
+      replicas: 2
+
+  partidos:
+    image: santgar/novatix-partidos:1.0
+    ports:
+      - "3002:3002"
+    environment:
+      DB_HOST: 192.168.100.5
+      DB_USER: novatix_user
+      DB_PASSWORD: Novatix2026*
+      DB_NAME: partidos_db
+    deploy:
+      replicas: 2
+
+  dinero:
+    image: santgar/novatix-dinero:1.0
+    ports:
+      - "3003:3003"
+    environment:
+      DB_HOST: 192.168.100.5
+      DB_USER: novatix_user
+      DB_PASSWORD: Novatix2026*
+      DB_NAME: dinero_db
+    deploy:
+      replicas: 2
+
+  equipos:
+    image: santgar/novatix-equipos:1.0
+    ports:
+      - "3004:3004"
+    environment:
+      DB_HOST: 192.168.100.5
+      DB_USER: novatix_user
+      DB_PASSWORD: Novatix2026*
+      DB_NAME: equipos_db
+    deploy:
+      replicas: 2

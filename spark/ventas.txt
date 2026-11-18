@@ -1,0 +1,7 @@
+Leche,2.5,10
+Pan,1.5,20
+Huevos,3,5
+Leche,2.5,4
+Pan,1.5,15
+Huevos,3,12
+Arroz,4,8
